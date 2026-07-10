@@ -19,15 +19,23 @@ apresenta de forma própria — gráficos, comparações, etc. Começa pequeno
 
 ## Status
 
-Domínio core implementado: sincronização de meetings, sessions, drivers e
-laps a partir da OpenF1, com endpoints REST próprios
+**API**: domínio core implementado — sincronização de meetings, sessions,
+drivers e laps a partir da OpenF1, com endpoints REST próprios
 (`/api/meetings`, `/api/meetings/{id}/sessions`,
 `/api/sessions/{id}/drivers`, `/api/sessions/{id}/laps`,
 `/api/sessions/{id}/drivers/{driverId}/laps`) e cache Redis com TTL
 diferenciado por status da sessão.
 
+**Front**: 3 telas navegáveis (meetings → sessions → drivers/laps)
+consumindo a API acima, com tema visual próprio (dark, tipografia
+`Geist`/`Geist Mono`, cor por equipe, destaque de volta mais rápida e
+melhor pessoal do piloto). Mobile-first em todo layout novo (ver
+[web/CLAUDE.md](web/CLAUDE.md)).
+
 Fora de escopo por enquanto: telemetria de alta frequência (`car_data`),
 pit stops, weather, race control, team radio, autenticação de usuários.
+
+Histórico de mudanças: [CHANGELOG.md](CHANGELOG.md).
 
 ## Rodando localmente
 

@@ -124,6 +124,7 @@ services:
       - web_next_cache:/app/.next
     environment:
       - NEXT_PUBLIC_API_URL=http://localhost:8000/api
+      - API_INTERNAL_URL=http://nginx/api
     env_file:
       - ./web/.env.local
     depends_on:
